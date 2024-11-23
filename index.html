@@ -47,9 +47,9 @@
 			margin-top: 0;
 		}
 		/* Hide all sections by default */
-		section(
+		section{
 			display:none;
-		)
+		}
 		section.active{
 			display: block;
 		}
@@ -80,27 +80,26 @@
 
 <script>
 	// JavaScript to handle section switching
-	const links = document.querySelectorAll('.sidebar a');
-	const sections = document.querySelectorAll('section');
+	document.addEventListener("DOMContentLoaded", () => {
 
-	links.forEach(link => {
-		link.addEventListener('click', (event) => {
-			event.preventDefault(); // Prevent default link behaviour			
+		const links = document.querySelectorAll('.sidebar a');
+		const sections = document.querySelectorAll('section');
 
-			// Get the target section ID
-			const targetId = link.getAttribute('data-target');
+		links.forEach(link => {
+			link.addEventListener('click', (event) => {
+				event.preventDefault(); // Prevent default link behaviour			
 
-			// Hide all sections
-			sections.forEach(section => section.classList.remove('active');
+				// Get the target section ID
+				const targetId = link.getAttribute('data-target');
 
-			// Show the selected section
-			const targetSection = document.getElementById(targetId);
-			if (targetSection) {
-				targetSection.classList.add('active');
-			}
+				// Hide all sections
+				sections.forEach(section => section.classList.remove('active');
+
+				// Show the selected section
+				document.getElementById(targetId).classList.add('active');
+			});
 		});
-	});
-
+	});				
 </script>
 
 </body>
