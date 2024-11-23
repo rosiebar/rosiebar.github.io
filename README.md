@@ -1,1 +1,0 @@
-# rosiebar.github.io
