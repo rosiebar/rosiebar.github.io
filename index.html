@@ -32,6 +32,7 @@
 			margin: 10px 0;
 			padding: 10px;
 			border-radius: 5px;
+			cursor: pointer;
 		}
 		.sidebar a:hover{
 			background: #444;
@@ -44,6 +45,13 @@
 		}
 		.content h1{
 			margin-top: 0;
+		}
+		/* Hide all sections by default */
+		section(
+			display:none;
+		)
+		section.active{
+			display: block;
 		}
 	</style>
 
@@ -61,6 +69,7 @@
 	<div class="content">
 		<section id="Projects">
 			<h1> List of projects</h1>
+			<p> This is where your projects list will go
 		</section>
 
 		<section id="Contact">
@@ -68,6 +77,29 @@
 			<p> Please reach out to me via email: rosannaclairebarnard (at) gmail (dot) com </p>
 		</section> 
 	</div>
+
+<script>
+	// JavaScript to handle section switching
+	const links = document.querySelectorAll('.sidebar a');
+	const sections = document.querySelectorAll('section');
+
+	links.forEach(link => {
+		link.addEventListener('click', () => {
+			// Get the target section ID
+			const targetId = link.getAttribute('data-target');
+
+			// Hide all sections
+			sections.forEach(section => section.classList.remove('active');
+
+			// Show the selected section
+			const targetSection = document.getElementById(targetId);
+			if (targetSection) {
+				targetSection.classList.add('active');
+			}
+		});
+	});
+
+</script>
 
 </body>
 </html>
