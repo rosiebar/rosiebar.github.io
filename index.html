@@ -93,10 +93,15 @@
 				const targetId = link.getAttribute('data-target');
 
 				// Hide all sections
-				sections.forEach(section => section.classList.remove('active');
+				sections.forEach(section => {
+					 section.classList.remove('active');
+				});
 
 				// Show the selected section
-				document.getElementById(targetId).classList.add('active');
+				const targetSection = document.getElementById(targetId);
+				if (targetSection) {
+					targetSection.classList.add('active');
+				}			
 			});
 		});
 	});				
