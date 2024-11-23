@@ -60,16 +60,16 @@
 	<!-- Sidebar -->
 	<div class="sidebar">
 		<h2>Rosanna Claire Barnard</h2>
-		<a href="#Projects">Projects</a>
-		<a href="#Contact">Contact</a>
+		<a href="#" data-target="Projects">Projects</a>
+		<a href="#" data-target="Contact">Contact</a>
 	</div>
 
 
 	<!-- Main Content -->
 	<div class="content">
-		<section id="Projects">
+		<section id="Projects" class="active">
 			<h1> List of projects</h1>
-			<p> This is where your projects list will go
+			<p> This is where your projects list will go.....</p>
 		</section>
 
 		<section id="Contact">
@@ -84,7 +84,9 @@
 	const sections = document.querySelectorAll('section');
 
 	links.forEach(link => {
-		link.addEventListener('click', () => {
+		link.addEventListener('click', (event) => {
+			event.preventDefault(); // Prevent default link behaviour			
+
 			// Get the target section ID
 			const targetId = link.getAttribute('data-target');
 
