@@ -9,6 +9,10 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:wght@300&family=VT323&display=swap" rel="stylesheet">
 	<style>
+		/* Default styling */
+		h1 {
+			font-size: 1.5em;
+		}
 		body {
 			font-family: 'Roboto', sans-serif;
 			font-size: 21px;
@@ -34,8 +38,8 @@
 		}
 		.sidebar h2{
 			margin: 0;
-			font-size: 1.5emi;
-			font-weight: 400; /* Reduced font weight for titles */
+			font-size: 2.25em;
+			font-weight: 300; /* Reduced font weight for titles */
 		}
 		.sidebar .nav-links{
 			display: flex;
@@ -112,12 +116,12 @@
 		}
 		.project-item {
 			background: white;
-			border: 1px solid black;
+			border: 3px solid rgba(0,0,0,0.5);
 			border-radius: 8px;
 			padding: 15px;
 			box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow */
 			transition: transform 0.3s, box-shadow 0.3s;
-			text-align: center;
+			text-align: left;
 		}
 		.project-item img {
 			width: 100%;
@@ -126,15 +130,16 @@
 		.project-item h3 {
 			margin: 15px 0 10px;
 			font-size: 1.2em;
+			font-weight: 400;
 			color: black;
 		}
 		.project-item p {
-			font-size: 1em;
+			font-size: 0.8em;
 			color: black;
 		}
 		.project-item:hover {
-			transform: scale(1.03);
-			box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+			transform: scale(1.01);
+			box-shadow: 0 6px 12px rgba(219,137,134,0.9);
 		}
 		
 		/* Responsive adjustment (optional) */
@@ -162,7 +167,7 @@
 	<div class="bio">
 		<img src="profile-photo.JPG" alt="Rosie Barnard's profile photograph">
 		<div class="details">
-			<p style=font-size:30px>I am a budding data storyteller who believes in the power of data visualisations and information design to surprise, enlighten, and inspire. </p>
+			<p style=font-size:30px>I am a budding <span style=color:rgba(95,201,111,1);>data storyteller</span> who believes in the power of <span style="color:rgba(219,127,134,1);">data visualisations</span> and <span style="color:rgba(94,77,206,1);">information design</span> to surprise, enlighten, and inspire. </p>
 			<p> Previously, I completed a PhD in Mathematics - studying network theory - and since then I have  worked in academia and industry as an infectious disease modeller and health economist. </p>
 		</div>
 	</div>
@@ -170,22 +175,28 @@
 	<!-- Main Content -->
 	<div class="content">
 		<section id="Projects" class="active">
-			<h1> Recent projects</h1>
+			<h1 style="font-size:1.2em;">Recent projects</h1>
 			<div class="project-grid">
 				<div class="project-item">
-					<img src="screenshot-mapping-museums.png" alt="A screenshot of Rosie's mapping museums project">
+					<a href="https://public.tableau.com/app/profile/rosanna.barnard/viz/MappingMuseumsanexplorationofUKmuseums/Dashboard5" target="_blank">
+						<img src="screenshot-mapping-museums.png" alt="A screenshot of Rosie's mapping museums project">
+					</a>
 					<h3> Mapping Museums</h3>
-					<p> For this project... </p>
+					<p> For this project I wanted to visualise a dataset from <a href="www.mappingmuseums.org" target="_blank">mappingmuseums.org</a> and explore the distribution of culture across the UK </p>
 				</div>
 				<div class="project-item">
 					<h3> Project 2</h3>
-					<p> This project.. </p>
+					<p> For this project </p>
+				</div>
+				<div class="project-item">
+					<h3>Project 3</h3>
+					<p> This project...</p>
 				</div>
 			</div>
 		</section>
 
 		<section id="Contact">
-			<h1> Contact</h1>
+			<h1 style="font-size:1.2em;">Contact</h1>
 			<p> Please reach out to me via email: rosannaclairebarnard (at) gmail (dot) com </p>
 		</section> 
 	</div>
